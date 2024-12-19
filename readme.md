@@ -5,8 +5,6 @@ Visualize **roll**, **pitch**, and **yaw** data from an **IMU** in real-time usi
 - **Python**3 backend to process and write IMU data to JSON.
 - **Vanilla JavaScript** frontend for rendering 3D models via three.js.
 
-Perfect for robotics and control system engineers looking to analyze orientation or stability in mobile robots.
-
 ## Why IMUs?
 
 An [Inertial Measurement Unit (IMU)](https://en.wikipedia.org/wiki/Inertial_measurement_unit) tracks orientation via accelerometer, gyroscope, and magnetometer fusion. Widely used in:
