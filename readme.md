@@ -1,18 +1,18 @@
 # IMU Visualization with three.js
 
-Visualize *roll*, *pitch*, and *yaw* data from an IMU in real-time using three.js. This project integrates:
-- Arduino Nicla Sense ME for IMU data.
-- Python backend to process and write IMU data to JSON.
-- Vanilla JavaScript frontend for rendering 3D models via three.js.
+Visualize **roll**, **pitch**, and **yaw** data from an **IMU** in real-time using **three.js**. This project integrates:
+- **Arduino Nicla Sense ME** for IMU data.
+- **Python**3 backend to process and write IMU data to JSON.
+- **Vanilla JavaScript** frontend for rendering 3D models via three.js.
 
 Perfect for robotics and control system engineers looking to analyze orientation or stability in mobile robots.
 
 ## Why IMUs?
 
-An Inertial Measurement Unit (IMU) tracks orientation via accelerometer, gyroscope, and magnetometer fusion. Widely used in:
-- Robotics for stability control.
-- Autonomous Vehicles for navigation.
-- AI Models as sensor inputs.
+An [Inertial Measurement Unit (IMU)](https://en.wikipedia.org/wiki/Inertial_measurement_unit) tracks orientation via accelerometer, gyroscope, and magnetometer fusion. Widely used in:
+- **Robotics for stability control.**
+- **Autonomous Vehicles for navigation.**
+- **AI Models as sensor inputs.**
 
 This project uses Arduino’s onboard sensor fusion. Alternatively, you can extend it for boards like the Arduino Nano BLE Sense Rev 2, with unfinished sensor fusion code included.
 
