@@ -1,10 +1,14 @@
 # IMU with three.js
 
-[IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit) stands for inertial measurement unit.
+This repository holds the code necessary to visualize the orientation of a project such as a robot given its roll pitch and yaw from a microcontroller such as the Arduino Nicla Sense ME. The repo holds the arduino code, a python backend for writing to a json file, and vanilla html with main.js using three.js for the frontend. This project can be reused to visualize the stability of control systems on your mobile robot. 
 
-IMU's are used in robotics and vehicles. Written in C++ Arduino and intended for use with a mobile robot.
 
-Use this code to visualize the orientation of your IMU using an STL File
+## Technical Background
+[IMU](https://en.wikipedia.org/wiki/Inertial_measurement_unit) stands for inertial measurement unit. IMU's are used in robotics and vehicles and are used for tracking orientation over time. They can also be used for positioning, especially if combined with GPS data. IMU's are used for control systems and more recently are being used as inputs to AI models. 
+
+IMU's are usually created by fusing the sensor data generated from an accelerometer, a gyroscope, and a magnetometer. In this implementation, the Arduino used has an onboard "AI" running the sensor fusion algorithm; however, a cheaper board such as the Arduino Nano BLE Sense Rev 2 could be used with some work on the sensor fusion algorithm - I have included some unfinished work in this repo if you want to finish it.
+
+The code works with any STL file, but you'll have to scale it, move the camera position around in main.js, or change the clipping planes to make sure your own STL is in view. 
 
 &nbsp;
 
@@ -12,12 +16,23 @@ Use this code to visualize the orientation of your IMU using an STL File
 
 &nbsp;
 
+## Dependencies
+
+Python
+`pyserial`: for connecting to your arduino.
+
+Javascript 
+`three.js`: for the front end visualization of your stl model. Currently no install is needed, we use a CDN.
+
+Node.js
+for `npx serve .`: for locally serving the frontend html and main.js files to your webrowser. During testing this was much faster than python http.server
+
 ## Usage
 
 To use the best and most recent implementation you can run
 ```
 python3 -m venv my_env
-source my_env/bin/activate # or on windows: source my_env/bin/activate
+source my_env/bin/activate 
 pip install pyserial
 ./start.sh
 ```
@@ -29,11 +44,9 @@ pip install pyserial
 ```
 repository/
 ├── app.py # the code and UI integrated together live here
-├── customize_gui # class for adding gui elements
+├── 
 ├── requirements.txt # the python packages needed to run locally
 ├── .gitignore # includes the local virtual environment named my_env
-├── .streamlit/
-│   └── config.toml # theme info for the UI
 └── docs/
     └── preview.png # preview photo for Github
 ```
