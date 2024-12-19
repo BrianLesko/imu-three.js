@@ -1,6 +1,6 @@
 # IMU Visualization with three.js
 
-Visualize roll, pitch, and yaw data from an IMU in real-time using three.js. This project integrates:
+Visualize *roll*, *pitch*, and *yaw* data from an IMU in real-time using three.js. This project integrates:
 - Arduino Nicla Sense ME for IMU data.
 - Python backend to process and write IMU data to JSON.
 - Vanilla JavaScript frontend for rendering 3D models via three.js.
