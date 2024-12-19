@@ -38,6 +38,7 @@ This project uses Arduino’s onboard sensor fusion. Alternatively, you can exte
 
 ## File Structure
 
+```
 repository/  
 ├── IMU_Nicla_Sense_ME.ino       # Arduino sketch for Nicla Sense ME  
 ├── imu_process.py               # Python backend for IMU data processing  
@@ -48,6 +49,7 @@ repository/
 │   ├── mystl.stl                # 3D model example  
 │   └── IMU_BLE_Sense_2.ino      # Alternate BLE-based Arduino sketch  
 └── start.sh                     # Script to launch the app  
+```
 
 ## Dependencies
 - Python: pyserial (IMU-Arduino communication).
